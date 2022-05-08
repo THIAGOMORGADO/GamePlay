@@ -4,7 +4,12 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 /* pages */
 import {Home} from '../screen/Home';
-import {SignIn} from '../screen/SignIn'
+import {SignIn} from '../screen/SignIn';
+import { AppointmentDetails } from '../screen/AppointmentDetails'
+
+/* Themes */
+
+import { theme } from '../global/styles/theme';
 
 
 const {Navigator, Screen} = createStackNavigator();
@@ -15,7 +20,7 @@ export function AuthRoutes() {
       headerMode='none'
       screenOptions={{
         cardStyle: {
-          backgroundColor: 'transparent'
+          backgroundColor: theme.colors.secondary100
         },
         animationEnabled: false // aqui esta desativando a animaçao no ios 
       }}
@@ -27,6 +32,10 @@ export function AuthRoutes() {
       <Screen 
         name="Home" 
         component={Home} 
+      />
+      <Screen 
+        name="AppointmentDetails" 
+        component={AppointmentDetails} 
       />
     </Navigator>
   )

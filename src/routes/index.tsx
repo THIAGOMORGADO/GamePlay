@@ -1,9 +1,9 @@
 import React from 'react';
 
-/* Navegação */
+/* importando a Navegação */
 import {NavigationContainer} from '@react-navigation/native'; 
 
-/* Routas de navvegação */
+/* Routas de navegação */
 import {AuthRoutes} from './auth.routes';
 
 export function Routes() {
